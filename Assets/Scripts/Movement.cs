@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
         isMoving = true;
         float elapsedTime=0;
         originPos = transform.position;
-        targetPos = originPos + direction;
+        targetPos = originPos + direction*400;
 
         while(elapsedTime < timetoMove)
         {
