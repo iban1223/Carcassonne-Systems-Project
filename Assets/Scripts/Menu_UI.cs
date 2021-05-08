@@ -28,6 +28,6 @@ public class Menu_UI : MonoBehaviour
     public void OnClickQuit()
     {
         //exit the program at any point
-        Application.Qiut();
+        Application.Quit();
     }
 }
