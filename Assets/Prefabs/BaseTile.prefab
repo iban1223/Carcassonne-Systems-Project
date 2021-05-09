@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 827086177785201030}
   - component: {fileID: 172198371707481386}
   - component: {fileID: 3369907898208678115}
+  - component: {fileID: -7453280930577517284}
   m_Layer: 5
   m_Name: BaseTile
   m_TagString: Movement
@@ -137,3 +138,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158321438554e9643ad364edaaf30ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7453280930577517284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4163291479497374927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab324be5fc6498746b5dc132ed03ea3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles: []
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  middle: 0

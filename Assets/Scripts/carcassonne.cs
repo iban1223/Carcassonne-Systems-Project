@@ -66,7 +66,7 @@ public class carcassonne : MonoBehaviour
     {
         //Updating the Phase and Player Display
         if (curPhase == 2) {
-            ppDisplay.text = "Player " + curPlayer.ToString() + "\n" + "Meeple Placing";
+            ppDisplay.text = "Player " + curPlayer.ToString() + "\n" + "Follower Placing";
         } else {
             ppDisplay.text = "Player " + curPlayer.ToString() + "\n" + "Tile Placing";
         }

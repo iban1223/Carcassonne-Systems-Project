@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9184769612273387497}
   - component: {fileID: 3412407851515914657}
   - component: {fileID: 2757026656003523853}
+  - component: {fileID: -4467185039748194085}
   m_Layer: 5
   m_Name: StartTile
   m_TagString: Untagged
@@ -124,3 +125,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
+--- !u!114 &-4467185039748194085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2154923122854204648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab324be5fc6498746b5dc132ed03ea3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles: []
+  top: 2
+  bottom: 0
+  right: 1
+  left: 1
+  middle: 0
