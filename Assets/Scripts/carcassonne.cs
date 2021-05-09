@@ -5,19 +5,24 @@ using UnityEngine.UI;
 
 public class carcassonne : MonoBehaviour
 {
-    public GameObject startTile;
-    public GameObject Tiles;
-    public Text score1Text;
-    public Text score2Text;
-    public Text ppDisplay;
-    public Text FollowerDisplay;
-
-    private int curPlayer;
-    private int curPhase;
-    private int scoreP1 ;
-    private int scoreP2;
-    private int followers1;
-    private int followers2;
+    public GameObject startTile; //Initial tile to be created
+    public GameObject baseTile; //basetile to be pulled when creating a new tile
+    public GameObject Tiles; //The in game category of all tiles in play
+    public Text score1Text; //Text displayed on P1 scoreboard
+    public Text score2Text; //Text displayed on P2 scoreboard
+    public Text ppDisplay; //Text displayed on for current player and phase board
+    public Text FollowerDisplay; //Text displayed on the follower count board
+    public Sprite[] tileOptions; //Array of all the possible tile sprites
+    private Image rend; //The sprite renderer to change the sprite
+   
+    private Movement moving; //Script object for movement
+    private int curPlayer; //Current player
+    private int curPhase; //Current phase
+    private int scoreP1; //Player 1's score
+    private int scoreP2; //Player 2's score
+    private int followers1; //Player 1's followers
+    private int followers2; //Player 2's followers
+    private int tileNumber; //Random number corresponding to the tile sprite to be pulled
 
     // Start is called before the first frame update
     void Start()
@@ -30,17 +35,12 @@ public class carcassonne : MonoBehaviour
         curPhase = 1;
         GameObject tile = Instantiate(startTile, new Vector2(0,0), Quaternion.Euler(0, 0, 90));
         tile.transform.SetParent(Tiles.transform, false);
+        spawnTile();
         updateSigns();
     }
 
-    
-    void Update()
-    {
-        
-    }
-
     //Function for clicking next
-    public void onClickNext()
+    private void onClickNext()
     {
         if (curPhase == 2) {
             if (curPlayer == 1) {
@@ -52,11 +52,17 @@ public class carcassonne : MonoBehaviour
         } else if (curPhase == 1) {
             curPhase = 2;
         }
+
+        if (curPhase == 1)
+            spawnTile();
+        if (curPhase == 2)
+            moving.changeInPlay(false);
+
         updateSigns();
     }
 
     //Function for updating displayed signs
-    public void updateSigns()
+    private void updateSigns()
     {
         //Updating the Phase and Player Display
         if (curPhase == 2) {
@@ -89,5 +95,16 @@ public class carcassonne : MonoBehaviour
         followers1 = follower1;
         followers2 = follower2;
         updateSigns();
+    }
+
+    //Spawns a new tile
+    private void spawnTile()
+    {
+        GameObject tile = Instantiate(baseTile, new Vector2(850,-520), Quaternion.identity);
+        tile.transform.SetParent(Tiles.transform, false);
+        tileNumber = Random.Range(0,38);
+        rend = tile.GetComponent<Image>();
+        rend.sprite = tileOptions[tileNumber];
+        moving = GameObject.FindObjectOfType(typeof(Movement)) as Movement;
     }
 }
