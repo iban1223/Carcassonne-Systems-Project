@@ -100,7 +100,7 @@ public class carcassonne : MonoBehaviour
     //Spawns a new tile
     private void spawnTile()
     {
-        GameObject tile = Instantiate(baseTile, new Vector2(0,0), Quaternion.identity);
+        GameObject tile = Instantiate(baseTile, new Vector2(850,-520), Quaternion.identity);
         tile.transform.SetParent(Tiles.transform, false);
         tileNumber = Random.Range(0,38);
         rend = tile.GetComponent<Image>();
