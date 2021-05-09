@@ -386,7 +386,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3edbed8fa04134005a3692a3b857eadd, type: 3}
   - {fileID: 21300000, guid: 793502484dc8e4ce0aba64d394cece87, type: 3}
   - {fileID: 21300000, guid: cd72d6848fc5d4bfe80017281d4dec51, type: 3}
-  rend: {fileID: -7965769659932575997, guid: 8480f8234f524464e9cc6f51ca837180, type: 3}
 --- !u!114 &238224486 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 23894152752138065, guid: 90acf50c085ed04498fabb512866ebb0, type: 3}
